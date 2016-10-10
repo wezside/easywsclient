@@ -519,12 +519,12 @@ WebSocket::pointer WebSocket::from_url(const std::string& url, const std::string
     return ::from_url(url, true, origin);
 }
 
-WebSocket::pointer WebSocket::from_url_headers(const std::string& url, const std::string& origin, const std::string& headers) {
-    return ::from_url(url, true, origin, headers);
-}
-
 WebSocket::pointer WebSocket::from_url_no_mask(const std::string& url, const std::string& origin) {
     return ::from_url(url, false, origin);
+}
+
+WebSocket::pointer WebSocket::from_url_headers(const std::string& url, const std::string& origin, const std::string& headers) {
+    return ::from_url(url, true, origin, headers);
 }
 
 
